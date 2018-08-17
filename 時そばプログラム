@@ -1,0 +1,27 @@
+#tokisoba program 2018/8/17
+
+import random
+
+toki1 = 0
+mon = []
+
+while toki1 < 17:
+  toki1 += 1
+  print("客：" + str(toki1))
+  mon.append(toki1)
+  if toki1 == 8:
+    print("客：いまなんどきだい？")
+    toki1 = random.randrange(16)
+    print("店主：へい、" + str(toki1) + "です")
+    if toki1 <8:
+      a = random.randint(1,2)
+      if a == 1:
+        print("客：あれっ")
+      elif a == 2:
+        print("客：なるほどね")
+    
+    if toki1 == 16:
+      print("客：御馳走さん！")
+      break
+     
+print("あなたは" + str(len(mon)) + "文はらいました！")
